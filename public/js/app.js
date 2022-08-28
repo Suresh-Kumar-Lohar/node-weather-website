@@ -11,16 +11,14 @@ weatherForm.addEventListener("submit", (e) => {
 
   const location = serach.value;
 
-  fetch("http://localhost:3000/weather?address=" + location).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.error) {
-          msg1.textContent = data.error;
-        } else {
-          msg1.textContent = data.address;
-          msg2.textContent = data.forecast;
-        }
-      });
-    }
-  );
+  fetch("/weather?address=" + location).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        msg1.textContent = data.error;
+      } else {
+        msg1.textContent = data.address;
+        msg2.textContent = data.forecast;
+      }
+    });
+  });
 });
