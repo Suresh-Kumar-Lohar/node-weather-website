@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/style.css" />
+    
+  </head>
+
+  <body>
+    <div class="main-content">
+    {{! handlebars : hbs }}
+      {{>header}}
+      <p>Use this site to get your weather</p>
+
+    <form >
+      <input placeholder="Location">
+      <button>Search</button>
+    </form>
+    <h4 id="msg-1"></h4>
+    <h4 id="msg-2"></h4>
+    </div>
+        {{>footer}}
+  <script src="/js/app.js"></script>
+  </body>
+</html>
